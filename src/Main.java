@@ -190,7 +190,7 @@ public class Main {
         AlgorithmQuestions algorithmQuestions = new AlgorithmQuestions();
         StringQuestions stringQuestions = new StringQuestions();
 
-        // arrays:
+        // Testcases:
         int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 4, 4, 4, 4, 4, 1};
         int[] twosumnums = {2, 7, 11, 15};
         int[] duplicatesnums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
@@ -201,7 +201,9 @@ public class Main {
         int[] nearbynums1 = {1, 2, 3, 1, 2, 3};
         int[] singlenums1 = {4, 1, 2, 1, 2};
         int[] duplicatenums = {1, 2, 3, 4};
-        String[] strs = {"flower", "flow", "flight"};
+        String[] strs = {"flower", "flow", "flight"}, strs2 = {"dog","racecar","car"}, strs3 = {"ab", "a"}, strs4 = {"reflower","flow","flight"},
+        strs5 = {"acc","aaa","aaba"}, strs6 = {"baab","bacb","b","cbc"};
+        String s = "   fly me   to   the moon  ", s1 = "a ";
 
         Scanner sc = new Scanner(System.in);
 
@@ -233,11 +235,11 @@ public class Main {
                     for (int i : nums) {
                         System.out.print(i + " ");
                     }
-
                     break;
                 case 2:
                     System.out.println("StringQuestions");
-                    System.out.println(stringQuestions.longestCommonPrefix(strs));
+                    System.out.println("Longest Common Prefix: " + "\"" +stringQuestions.longestCommonPrefix(strs5) + "\"");
+                    System.out.println("Length of last word: " + stringQuestions.LengthOfLastWord(s1));
                     break;
                 case 3:
                     System.out.println("MathQuestions");
