@@ -204,6 +204,7 @@ public class Main {
         String[] strs = {"flower", "flow", "flight"}, strs2 = {"dog","racecar","car"}, strs3 = {"ab", "a"}, strs4 = {"reflower","flow","flight"},
         strs5 = {"acc","aaa","aaba"}, strs6 = {"baab","bacb","b","cbc"};
         String s = "   fly me   to   the moon  ", s1 = "a ";
+        int[] fruits = {4,2,5}, baskets = {3,5,4};
 
         Scanner sc = new Scanner(System.in);
 
@@ -231,6 +232,7 @@ public class Main {
                     System.out.println("plusOne: " + Arrays.toString(main.plusOne(new int[]{8, 9, 9})));
                     System.out.println("removeElement: " + main.removeElement(nums, 4));
                     System.out.println("Single Number: " + questions.singleNumber(singlenums1));
+                    System.out.println("Fruits into baskets II: " + questions.NumOfUnplacedFruits(fruits, baskets));
 
                     for (int i : nums) {
                         System.out.print(i + " ");

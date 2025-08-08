@@ -77,4 +77,41 @@ public class ArrayQuestions {
         }
         return false;
     }
+
+    // Optimized Version
+    public int NumOfUnplacedFruits(int[] fruits, int[] baskets) {
+        int unplacedCount = 0;
+        for (int fruit : fruits) {
+            boolean placed = false;
+            for (int j = 0; j < baskets.length; j++) {
+                if (fruit <= baskets[j]) {
+                    baskets[j] = -1;
+                    placed = true;
+                    break;
+                }
+            }
+            if (!placed) unplacedCount++;
+        }
+        return unplacedCount;
+    }
+
+    // First attempt Brute Force
+    public int NumOfUnplacedFruitsFirstAttempt(int[] fruits, int[] baskets) {
+        int unplacedCount = 0;
+        HashSet<Integer> usedBaskets = new HashSet<Integer>();
+        for (int fruit : fruits) {
+            boolean placed = false;
+            for (int j = 0; j < baskets.length; j++) {
+                if (!usedBaskets.contains(j)) {
+                    if (fruit <= baskets[j]) {
+                        usedBaskets.add(j);
+                        placed = true;
+                        break;
+                    }
+                }
+            }
+            if (!placed) unplacedCount++;
+        }
+        return unplacedCount;
+    }
 }
