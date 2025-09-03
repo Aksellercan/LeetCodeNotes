@@ -189,6 +189,7 @@ public class Main {
         MathQuestions mathQuestions = new MathQuestions();
         AlgorithmQuestions algorithmQuestions = new AlgorithmQuestions();
         StringQuestions stringQuestions = new StringQuestions();
+        SortingAlgorithms sortingAlgorithms = new SortingAlgorithms();
 
         // Testcases:
         int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 4, 4, 4, 4, 4, 1};
@@ -198,6 +199,7 @@ public class Main {
         int[] prices = {2, 4, 1};
         int[] nums1 = {1, 2, 2, 1};
         int[] nums2 = {2, 2};
+        int[] toBubbleSort = {5, 1, 4, 2, 8}, toBubbleSort1 = {1, 2, 3, 4, 5}, toBubbleSort2 = {5, 4, 3, 2, 1}, toBubbleSort3 = {3, 1, 2, 3, 2};
         int[] nearbynums1 = {1, 2, 3, 1, 2, 3};
         int[] singlenums1 = {4, 1, 2, 1, 2};
         int[] duplicatenums = {1, 2, 3, 4};
@@ -210,12 +212,15 @@ public class Main {
 
         // Print answers:
         while (true) {
-            System.out.println("LeetCode Solutions\n" +
-                    "1 ArrayQuestions\n" +
-                    "2 StringQuestions\n" +
-                    "3 MathQuestions\n" +
-                    "4 AlgorithmQuestions\n" +
-                    "0 Exit Program");
+            System.out.println(
+                    "LeetCode Solutions\n" +
+                    "1 Array Questions\n" +
+                    "2 String Questions\n" +
+                    "3 Math Questions\n" +
+                    "4 Algorithm Questions\n" +
+                    "5 Sorting Algorithms\n" +
+                    "0 Exit Program"
+            );
             int input = sc.nextInt();
 
             switch (input) {
@@ -253,6 +258,10 @@ public class Main {
                     System.out.println("FirstBadVersion: " + main.firstBadVersion(2126753390));
                     System.out.println("(Amazon OA Question 2) getDataDependenceSum: " + algorithmQuestions.getDataDependenceSum(13));
                     System.out.println("*NeetCode* Contains Duplicate: " + questions.hasDuplicate(duplicatenums));
+                    break;
+                case 5:
+                    System.out.println("Sorting Algorithms");
+                    System.out.println("BubbleSort: " + Arrays.toString(sortingAlgorithms.BubbleSort(toBubbleSort3)));
                     break;
                 case 0:
                     System.out.println("Exiting...");
