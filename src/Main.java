@@ -200,6 +200,7 @@ public class Main {
         int[] nums1 = {1, 2, 2, 1};
         int[] nums2 = {2, 2};
         int[] toBubbleSort = {5, 1, 4, 2, 8}, toBubbleSort1 = {1, 2, 3, 4, 5}, toBubbleSort2 = {5, 4, 3, 2, 1}, toBubbleSort3 = {3, 1, 2, 3, 2};
+        int[] toInsertionSort = {9, 5, 6, 7, 8, 2, 4, 7}, toInsertionSort1 = {1, 2, 3, 4, 5}, toInsertionSort2 = {5, 4, 3, 2, 1}, toInsertionSort3 = {3, 1, 2, 3, 2};
         int[] nearbynums1 = {1, 2, 3, 1, 2, 3};
         int[] singlenums1 = {4, 1, 2, 1, 2};
         int[] duplicatenums = {1, 2, 3, 4};
@@ -262,6 +263,7 @@ public class Main {
                 case 5:
                     System.out.println("Sorting Algorithms");
                     System.out.println("BubbleSort: " + Arrays.toString(sortingAlgorithms.BubbleSort(toBubbleSort3)));
+                    System.out.println("Insertion Sort: " + Arrays.toString(sortingAlgorithms.InsertionSort(toInsertionSort)));
                     break;
                 case 0:
                     System.out.println("Exiting...");
