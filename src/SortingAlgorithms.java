@@ -22,7 +22,7 @@ public class SortingAlgorithms {
                     temp = array[i];
                     array[i] = array[j];
                     array[j] = temp;
-                    //                    System.out.printf("New State: i at %d = %d and j at %d = %d\n", i, array[i], j, array[j]);
+                    //                    System.out.printf("New State: i at %d = %d and j at %d = %d\n", i, array[i], j, array[j]);c
                 }
             }
         }

@@ -259,6 +259,7 @@ public class Main {
                     System.out.println("FirstBadVersion: " + main.firstBadVersion(2126753390));
                     System.out.println("(Amazon OA Question 2) getDataDependenceSum: " + algorithmQuestions.getDataDependenceSum(13));
                     System.out.println("*NeetCode* Contains Duplicate: " + questions.hasDuplicate(duplicatenums));
+                    System.out.println("Valid Parentheses: " + algorithmQuestions.isValid("(){}}{"));
                     break;
                 case 5:
                     System.out.println("Sorting Algorithms");

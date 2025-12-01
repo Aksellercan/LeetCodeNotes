@@ -11,20 +11,20 @@ public class AlgorithmQuestions {
         ArrayList<Integer> list = new ArrayList<Integer>();
         ArrayList<Long> listk = new ArrayList<>();
         for (int x = 1; x <= n; x++) {
-            long k = n/x;
+            long k = n / x;
             var1 = k;
             var2 = x;
-            if(n/k == x){
+            if (n / k == x) {
                 list.add(x);
                 listk.add(k);
                 //return "k is " + k + "\nk is "+ n/k + "\nx is " + x;
             }
         }
-        for (int b : list){
+        for (int b : list) {
             sum += b;
         }
         return "\nDebug\nShould return value long sum: " + sum + "\nValue of k is: " + var1 +
-                "\nResult of n/k is: "+ n/var1 + "\nValue of x is: " + var2 + "\nX list:"+list +"\nK list: "+ listk+ "\nSum is: " + sum;
+                "\nResult of n/k is: " + n / var1 + "\nValue of x is: " + var2 + "\nX list:" + list + "\nK list: " + listk + "\nSum is: " + sum;
     }
 
     //question 2
@@ -32,13 +32,13 @@ public class AlgorithmQuestions {
         long sum = 0;
         ArrayList<Integer> list = new ArrayList<Integer>();
         for (int x = 1; x <= n; x++) {
-            long k = n/x;
-            if(n/k == x){
+            long k = n / x;
+            if (n / k == x) {
                 list.add(x);
                 //sum +=x;
             }
         }
-        for (int b : list){
+        for (int b : list) {
             sum += b;
         }
         return sum;
@@ -56,5 +56,24 @@ public class AlgorithmQuestions {
             map.put(nums[i], i);
         }
         return null;
+    }
+
+    public boolean isValid(String s) {
+        char openParan = '(', closedParan = ')', openBracket = '[', closedBracket = ']', openCurly = '{', closedCurly = '}';
+        int j = 0;
+        boolean returnValue = false;
+        for (int i = s.length() - 1; i > 0; i--) {
+            if ((i + j) == s.length()-1) break;
+            if (((s.charAt(j) == openParan) && (s.charAt(i) == closedParan)) ||
+                    ((s.charAt(j) == openBracket) && (s.charAt(i) == closedBracket)) ||
+                    ((s.charAt(j) == openCurly) && (s.charAt(i) == closedCurly))) {
+                returnValue = true;
+            } else {
+                returnValue = false;
+            }
+            j++;
+            if (j == s.length()) break;
+        }
+        return returnValue;
     }
 }
