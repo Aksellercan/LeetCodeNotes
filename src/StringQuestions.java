@@ -29,6 +29,39 @@ public class StringQuestions {
         return result.toString();
     }
 
+    public String longestCommonPrefixV2(String[] strs) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < strs.length; i++) {
+            if (i+1 == strs.length) break;
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int j = 0; j < strs[i].length(); j++) {
+                if (j + 1 > strs[i+1].length()) break;
+                System.out.println("j is " + j + " i is " + i);
+                System.out.printf("1st string %s 2nd string %s", strs[i], strs[i+1]);
+                System.out.printf(" 1st string char %c 2nd string char %c\n", strs[i].charAt(j), strs[i+1].charAt(j));
+                if (strs[i].charAt(j) == strs[i+1].charAt(j)) {
+                    sb.append(strs[i].charAt(j));
+                    stringBuilder.append(strs[i].charAt(j));
+                } else {
+                    sb = stringBuilder;
+                    break;
+                }
+            }
+            if (sb.isEmpty()) break;
+        }
+        return sb.toString();
+    }
+
+    public String longestCommonPrefixV3(String[] strs) {
+        StringBuilder sb = new StringBuilder();
+        int charIndex = 0;
+        for (int i = 0; i < strs.length; i++) {
+
+        }
+        return sb.toString();
+    }
+
+
     public int LengthOfLastWord(String s) {
         String[] str = s.split(" ");
         return str[str.length-1].length();
