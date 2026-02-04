@@ -123,4 +123,66 @@ public class ArrayQuestions {
         }
         return ans;
     }
+
+    public int[] minOperations(String boxes) {
+        int[] ans = new int[boxes.length()];
+        for (int i = 0; i < boxes.length(); i++) {
+            int sum = 0;
+            for (int j = 0; j < boxes.length(); j++) {
+                if (boxes.charAt(j) == '0') continue;
+                //distance
+                int distance = Math.abs(i - j);
+                sum += distance;
+            }
+            ans[i] = sum;
+        }
+        return ans;
+    }
+
+    public List<Integer> findWordsContaining(String[] words, char x) {
+        List<Integer> ans = new ArrayList<>();
+        for (int i = 0; i < words.length; i++) {
+            for (int j = 0; j < words[i].length(); j++) {
+                if (words[i].charAt(j) == x) {
+                    ans.add(i);
+                    break;
+                }
+            }
+        }
+        return ans;
+    }
+
+    public int[] pivotArray(int[] nums, int pivot) {
+        List<Integer> smaller = new ArrayList<>();
+        List<Integer> bigger = new ArrayList<>();
+        int pivotCount = 0;
+        for (int num : nums) {
+            if (num < pivot) {
+                smaller.add(num);
+                continue;
+            }
+            if (pivot == num) {
+                pivotCount++;
+                continue;
+            }
+            bigger.add(num);
+        }
+        int[] ans = new int[nums.length];
+        int index = 0;
+        for (int i = 0; i < ans.length; i++) {
+            if (index >= smaller.size()) {
+                if (pivotCount != 0) {
+                    ans[i] = pivot;
+                    pivotCount--;
+                    continue;
+                }
+                ans[i] = bigger.get(index-(smaller.size()+pivotCount));
+                index++;
+                continue;
+            }
+            ans[i] = smaller.get(index);
+            index++;
+        }
+        return ans;
+    }
 }

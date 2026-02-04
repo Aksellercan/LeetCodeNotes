@@ -1,5 +1,6 @@
 import QuestionObjects.ListNode;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -213,6 +214,11 @@ public class Main {
         int[] fruits = {4,2,5}, baskets = {3,5,4};
         ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
         ListNode list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+        String boxes = "001011";
+        String[] words = {"leet","code"};
+        char x = 'e';
+        int[] numsPivot = {9,12,5,10,14,3,10};
+        int pivot = 10;
 
         Scanner sc = new Scanner(System.in);
 
@@ -245,7 +251,9 @@ public class Main {
                     System.out.println("Single Number: " + questions.singleNumber(singlenums1));
                     System.out.println("Fruits into baskets II: " + questions.NumOfUnplacedFruits(fruits, baskets));
                     System.out.println("Concataion of Arrays: " + Arrays.toString(questions.getConcatenation(fruits)));
-
+                    System.out.println("Minimum Number of Operations to Move All Balls to Each Box: " + Arrays.toString(questions.minOperations(boxes)));
+                    System.out.println("Find Words Containing Character: " + questions.findWordsContaining(words, x));
+                    System.out.println("Pivot: " + Arrays.toString(questions.pivotArray(numsPivot, pivot)));
                     for (int i : nums) {
                         System.out.print(i + " ");
                     }
